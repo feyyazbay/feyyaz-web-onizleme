@@ -1,2 +1,18 @@
+# Üretim robots.txt (önizleme derlemeleri bunu kendi kuralıyla değiştirir).
+# Kamuya açık sayfalar arama ve yapay zekâ ARAMA botlarına açıktır.
 User-agent: *
 Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# ChatGPT araması: sitenin arama sonuçlarında görünmesi için.
+User-agent: OAI-SearchBot
+Allow: /
+
+# GPTBot (yapay zekâ EĞİTİMİ) ayrı bir tercihtir; Dr. Bay karar verene kadar değiştirilmedi:
+# yukarıdaki genel kural (User-agent: *) geçerlidir. Eğitimi engellemek için aşağıdaki iki satırı açın:
+# User-agent: GPTBot
+# Disallow: /
+
+# Sitemap satırı alan adı belli olunca scripts/seo-dosyalari.mjs tarafından eklenir (alan adı uydurulmaz).
